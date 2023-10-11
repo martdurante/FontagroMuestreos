@@ -25,7 +25,6 @@ library(DT)
 #suppressMessages(library(tidyverse))
 #theme_set(theme_bw())
 #setwd('/home/durante/OneDrive/ResultFontagro/dashboardFONTAGRO/')
-tiempo = read.csv('tablas/pronostico.csv')
 pronostico = read.csv('tablas/OUTpronostico.csv')
 ```
 
@@ -66,5 +65,5 @@ datatable(pronostico,
 ###  Ultimas Mediciones
 ```{r}
 pronostico %>%
-  filter(Pais == 'Uruguay')
+  filter(Pais == 'Argentina')
 ```
