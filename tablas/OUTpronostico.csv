@@ -1,0 +1,19 @@
+Pais,Region,Localidad,fecha,EstadoTiempo,satellite
+Argentina,LitoralE,cdu,2023-10-05,0.00 %nubes,Sentinel-2B
+Argentina,LitoralE,cdu,2023-10-10,1.41 %nubes,Sentinel-2A
+Argentina,LitoralE,cdu,2023-10-12,Sunny 18/4 5%,Sentinel-2B
+Argentina,LitoralE,cdu,2023-10-15,Sunny 28/16 6%,Sentinel-2B
+Argentina,LitoralE,cdu,2023-10-20,Mostly Sunny 27/15 5%,Landsat-8
+Argentina,LitoralE,cdu,2023-10-20,Mostly Sunny 27/15 5%,Sentinel-2A
+Argentina,LitoralE,feliciano,2023-10-03,0.00 %nubes,Sentinel-2A
+Argentina,LitoralE,feliciano,2023-10-05,0.00 %nubes,Sentinel-2B
+Argentina,LitoralE,feliciano,2023-10-08,0.00 %nubes,Sentinel-2B
+Argentina,LitoralE,feliciano,2023-10-10,0.00 %nubes,Sentinel-2A
+Argentina,LitoralE,feliciano,2023-10-12,Sunny 19/6 3%,Sentinel-2B
+Argentina,LitoralE,feliciano,2023-10-13,Sunny 22/9 4%,Sentinel-2A
+Argentina,LitoralE,feliciano,2023-10-15,Partly Cloudy 30/19 5%,Sentinel-2B
+Argentina,LitoralE,feliciano,2023-10-16,AM Showers 29/18 45%,Landsat-8
+Argentina,LitoralE,feliciano,2023-10-17,Partly Cloudy 27/14 24%,Sentinel-2A
+Argentina,LitoralE,feliciano,2023-10-18,Showers 22/13 49%,Sentinel-2B
+Argentina,LitoralE,feliciano,2023-10-20,Sunny 28/16 5%,Landsat-8
+Argentina,LitoralE,feliciano,2023-10-20,Sunny 28/16 5%,Sentinel-2A

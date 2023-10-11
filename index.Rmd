@@ -1,0 +1,70 @@
+---
+title: "Sitios Fontagro"
+authors: "MD"
+output: 
+  flexdashboard::flex_dashboard:
+    # orientation: columns
+    # vertical_layout: fill
+    theme: cosmo
+    #logo: INIA_URUGUAY_blanco.svg
+    # favicon: INIA_URUGUAY_azul.png
+    # storyboard: true
+# runtime: shiny
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(DT)
+#library(flexdashboard)
+#library(DT)
+#library(plotly)
+#library(leaflet)
+#library(crosstalk)
+#suppressMessages(library(tidyverse))
+#theme_set(theme_bw())
+#setwd('/home/durante/OneDrive/ResultFontagro/dashboardFONTAGRO/')
+tiempo = read.csv('tablas/pronostico.csv')
+pronostico = read.csv('tablas/OUTpronostico.csv')
+```
+
+# General
+
+## Column {data-width = 350} {.tabset}
+[FONTAGRO Monitreo Satelital](https://www.fontagro.org/new/proyectos/monitoreosatelital)
+
+### El proyecto
+
+### Participantes
+
+<!-- # Muestreos  -->
+
+# Mediciones
+
+## Column {data-width = 350} {.tabset}
+
+### Pronóstico y Satélites
+***
+- Filas en rojo: últimas pasadas (el % representa la cobertura de nubes en la escena)
+- Filas en azul: próximas (el % representa la probabilidad de lluvia)
+
+```{r}
+hoy = paste('',format(Sys.Date(), "%Y-%m-%d"),'',sep="'")
+#background <- "value < '2023-08-30' ? 'orange' : value != 'else' ? 'blue' : ''"
+background <- paste('value < ', hoy,
+                    " ? '#fb8f78' : value != 'else' ? '#7a78fb' : ''", sep='')
+class(background) <- "JS_EVAL"
+
+datatable(pronostico,
+          filter='top',
+          options = list(pageLength = 10)) %>%
+            formatStyle('fecha',  target = 'row',
+                        backgroundColor = background)
+
+```
+###  Ultimas Mediciones
+```{r}
+pronostico %>%
+  filter(Pais == 'Uruguay')
+```
