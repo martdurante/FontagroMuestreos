@@ -1,31 +1,18 @@
 Pais,Region,Localidad,fecha,EstadoTiempo,satellite
-Argentina,LitoralE,cdu,2023-10-05,0.00 %nubes,Sentinel-2B
-Argentina,LitoralE,cdu,2023-10-10,1.41 %nubes,Sentinel-2A
-Argentina,LitoralE,cdu,2023-10-12,Sunny 18/4 5%,Sentinel-2B
-Argentina,LitoralE,cdu,2023-10-15,Sunny 28/16 6%,Sentinel-2B
-Argentina,LitoralE,cdu,2023-10-20,Mostly Sunny 27/15 5%,Landsat-8
-Argentina,LitoralE,cdu,2023-10-20,Mostly Sunny 27/15 5%,Sentinel-2A
-Argentina,LitoralE,feliciano,2023-10-03,0.00 %nubes,Sentinel-2A
-Argentina,LitoralE,feliciano,2023-10-05,0.00 %nubes,Sentinel-2B
-Argentina,LitoralE,feliciano,2023-10-08,0.00 %nubes,Sentinel-2B
-Argentina,LitoralE,feliciano,2023-10-10,0.00 %nubes,Sentinel-2A
-Argentina,LitoralE,feliciano,2023-10-12,Sunny 19/6 3%,Sentinel-2B
-Argentina,LitoralE,feliciano,2023-10-13,Sunny 22/9 4%,Sentinel-2A
-Argentina,LitoralE,feliciano,2023-10-15,Partly Cloudy 30/19 5%,Sentinel-2B
-Argentina,LitoralE,feliciano,2023-10-16,AM Showers 29/18 45%,Landsat-8
-Argentina,LitoralE,feliciano,2023-10-17,Partly Cloudy 27/14 24%,Sentinel-2A
-Argentina,LitoralE,feliciano,2023-10-18,Showers 22/13 49%,Sentinel-2B
-Argentina,LitoralE,feliciano,2023-10-20,Sunny 28/16 5%,Landsat-8
-Argentina,LitoralE,feliciano,2023-10-20,Sunny 28/16 5%,Sentinel-2A
-Argentina,Pampa,Oliveros,2023-10-03,0.00 %nubes,Sentinel-2A
-Argentina,Pampa,Oliveros,2023-10-05,0.00 %nubes,Sentinel-2B
-Argentina,Pampa,Oliveros,2023-10-08,0.00 %nubes,Sentinel-2B
-Argentina,Pampa,Oliveros,2023-10-10,0.00 %nubes,Sentinel-2A
-Argentina,Pampa,Oliveros,2023-10-12,Sunny 19/5 3%,Sentinel-2B
-Argentina,Pampa,Oliveros,2023-10-13,Sunny 22/8 5%,Sentinel-2A
-Argentina,Pampa,Oliveros,2023-10-15,Sunny 29/16 5%,Sentinel-2B
-Argentina,Pampa,Oliveros,2023-10-16,Partly Cloudy 30/15 21%,Landsat-8
-Argentina,Pampa,Oliveros,2023-10-17,Partly Cloudy 27/13 6%,Sentinel-2A
-Argentina,Pampa,Oliveros,2023-10-18,Showers 23/12 40%,Sentinel-2B
-Argentina,Pampa,Oliveros,2023-10-20,Sunny 28/16 5%,Landsat-8
-Argentina,Pampa,Oliveros,2023-10-20,Sunny 28/16 5%,Sentinel-2A
+Argentina,Litoral,CdU,2023-10-15,0.00 %nubes,Sentinel-2B
+Argentina,Litoral,CdU,2023-10-20,75.24 %nubes,Sentinel-2A
+Argentina,Litoral,CdU,2023-10-25,Sunny 23/9 8%,Sentinel-2B
+Argentina,Litoral,CdU,2023-10-25,Sunny 23/9 8%,Landsat-8
+Argentina,Litoral,CdU,2023-10-27,Partly Cloudy 25/13 16%,Sentinel-2A
+Argentina,Litoral,CdU,2023-10-30,Scattered T-Storms 26/14 48%,Sentinel-2A
+Argentina,Litoral,CdU,2023-11-01,Partly Cloudy 21/10 13%,Sentinel-2B
+Argentina,Pampa,Oliveros,2023-10-13,0.00 %nubes,Sentinel-2A
+Argentina,Pampa,Oliveros,2023-10-15,0.00 %nubes,Sentinel-2B
+Argentina,Pampa,Oliveros,2023-10-18,88.83 %nubes,Sentinel-2B
+Argentina,Pampa,Oliveros,2023-10-20,99.16 %nubes,Sentinel-2A
+Argentina,Pampa,Oliveros,2023-10-25,Partly Cloudy 23/12 10%,Sentinel-2B
+Argentina,Pampa,Oliveros,2023-10-27,Partly Cloudy 26/15 22%,Sentinel-2A
+Argentina,Pampa,Oliveros,2023-10-28,Sunny 30/18 16%,Sentinel-2B
+Argentina,Pampa,Oliveros,2023-10-30,Scattered T-Storms 24/12 60%,Sentinel-2A
+Argentina,Pampa,Oliveros,2023-11-01,Partly Cloudy 21/11 16%,Sentinel-2B
+Argentina,Pampa,Oliveros,2023-11-01,Partly Cloudy 21/11 16%,Landsat-8

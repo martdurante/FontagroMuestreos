@@ -1,4 +1,3 @@
 Pais,Region,Localidad,Lat,Lon,Pronostico
-Argentina,LitoralE,cdu,-32.4911,-58.3495,https://weather.com/en-IN/weather/tenday/l/9049e86839de7e1207c67551fbb5af20095726f8f1386a8e233f237db897e297
-Argentina,LitoralE,feliciano,-30.3852,-58.7689,https://weather.com/en-IN/weather/tenday/l/6e886d1e7a1241352a3c5e03d5be541d203968537df5a6e9566ade4db2daf5ca
+Argentina,Litoral,CdU,-32.4911,-58.3495,https://weather.com/en-IN/weather/tenday/l/9049e86839de7e1207c67551fbb5af20095726f8f1386a8e233f237db897e297
 Argentina,Pampa,Oliveros,-30.3852,-58.7689,https://weather.com/en-IN/weather/tenday/l/1c5d0a279c0ba2ea4caad2ea4e5bfbb1e23b7251b7254720d04effc0a4f0488d
