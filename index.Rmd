@@ -26,6 +26,7 @@ library(DT)
 #theme_set(theme_bw())
 #setwd('/home/durante/OneDrive/ResultFontagro/dashboardFONTAGRO/')
 pronostico = read.csv('tablas/OUTpronostico.csv')
+mediciones = read.csv('tablas/OUTpuntos.csv')
 ```
 
 # General
@@ -64,6 +65,7 @@ datatable(pronostico,
 ```
 ###  Ultimas Mediciones
 ```{r}
-pronostico %>%
-  filter(Pais == 'Argentina')
+mediciones %>%
+  na.omit()  %>%
+  datatable(filter='top')
 ```
