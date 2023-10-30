@@ -17,15 +17,28 @@ editor_options:
 ```{r setup, include=FALSE}
 library(tidyverse)
 library(DT)
-#library(flexdashboard)
-#library(DT)
-#library(plotly)
+library(flexdashboard)
+library(DT)
+library(tidyverse)
+library(crosstalk)
+library(plotly)
 #library(leaflet)
-#library(crosstalk)
 #suppressMessages(library(tidyverse))
 #theme_set(theme_bw())
 #setwd('/home/durante/OneDrive/ResultFontagro/dashboardFONTAGRO/')
-pronostico = read.csv('tablas/OUTpronostico.csv')
+pronostico = read.csv('/home/durante/OneDrive/ResultFontagro/GIT/FontagroMuestreos/tablas/OUTpronostico.csv')
+for (i in 1:nrow(pronostico)){
+  pasado <- grepl("%nubes", pronostico$EstadoTiempo[i], fixed=TRUE)
+  separado <- unlist(strsplit(pronostico$EstadoTiempo[i],' '))
+  valor <- ifelse(pasado==TRUE, separado[1], substring(separado[length(separado)],1,nchar(separado[length(separado)])-1))
+  #pronostico$valor[i] <- as.integer(valor)
+  pronostico$nubes[i] <- ifelse(pasado==TRUE,as.integer(valor),NA)
+  pronostico$probLluvia[i] <- ifelse(pasado==TRUE,NA,as.integer(valor))
+}
+pronostico$Localidad <- as.factor(pronostico$Localidad)
+#new dt for crosstalk
+shared_data <- SharedData$new(pronostico)
+
 mediciones = read.csv('tablas/OUTpuntos.csv')
 ```
 
@@ -38,32 +51,31 @@ mediciones = read.csv('tablas/OUTpuntos.csv')
 
 ### Participantes
 
-<!-- # Muestreos  -->
-
-# Mediciones
-
-## Column {data-width = 350} {.tabset}
-
-### Pronóstico y Satélites
-***
-- Filas en rojo: últimas pasadas (el % representa la cobertura de nubes en la escena)
-- Filas en azul: próximas (el % representa la probabilidad de lluvia)
+# Pronóstico
+Inputs {.sidebar data-width=250}
+-----------------------------------------------
 
 ```{r}
-hoy = paste('',format(Sys.Date(), "%Y-%m-%d"),'',sep="'")
-#background <- "value < '2023-08-30' ? 'orange' : value != 'else' ? 'blue' : ''"
-background <- paste('value < ', hoy,
-                    " ? '#fb8f78' : value != 'else' ? '#7a78fb' : ''", sep='')
-class(background) <- "JS_EVAL"
-
-datatable(pronostico,
-          filter='top',
-          options = list(pageLength = 10)) %>%
-            formatStyle('fecha',  target = 'row',
-                        backgroundColor = background)
-
+filter_select("Localidad", "Select Localidad", shared_data, ~Localidad, multiple = FALSE)
+#filter_slider("Fecha", "Select Fecha", shared_data, ~Fecha, round = TRUE, ticks = FALSE)
 ```
-###  Ultimas Mediciones
+Column {data-width=700}
+---------------------------------------------
+
+### Grafico del tiempo para las próximas visitas de satélite
+```{r}
+plot_ly(shared_data, y = ~nubes, x = ~fecha, type = 'scatter', mode='lines+markers', line = list(width = 1), color = I(~Localidad), orientation = 'h') %>%
+ add_trace(y = ~probLluvia, mode = 'lines+markers', line = list(width = 1, dash = 'dot')) %>%
+  layout(title = "Nubes y Probabilidad de lluvia",
+         xaxis = list(title = "Fecha"),
+         yaxis = list (title = "%")) %>% layout(autosize = F, height = 300)
+```
+### Tabla del tiempo para las próximas visitas de satélite
+```{r}
+shared_data %>%
+  datatable(filter='top')
+```
+#  Ultimas Mediciones
 ```{r}
 mediciones %>%
   na.omit()  %>%
