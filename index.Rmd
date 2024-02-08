@@ -47,9 +47,9 @@ mediciones = read.csv('tablas/OUTpuntos.csv')
 ## Column {data-width = 350} {.tabset}
 [FONTAGRO Monitreo Satelital](https://www.fontagro.org/new/proyectos/monitoreosatelital)
 
-### El proyecto
-
-### Participantes
+### Herramientas Digitales
+[APP para clasificar ambientes](https://ee-fontagrobiomasa.projects.earthengine.app/view/clasificacion)  
+[Calcularora de Nº de muestras](https://fontagrobiomasa.shinyapps.io/calculadoraNmuestras/)
 
 # Pronóstico
 Inputs {.sidebar data-width=250}

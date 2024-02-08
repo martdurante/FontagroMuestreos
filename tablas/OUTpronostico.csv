@@ -1,22 +1,20 @@
 Pais,Region,Localidad,fecha,EstadoTiempo,satellite
-Argentina,Litoral,CdU,2023-10-25,11.34 %nubes,Sentinel-2B
-Argentina,Litoral,CdU,2023-10-30,100.00 %nubes,Sentinel-2A
-Argentina,Litoral,CdU,2023-10-30,100.00 %nubes,Sentinel-2A
-Argentina,Litoral,CdU,2023-11-04,Sunny 23/10 8%,Sentinel-2B
-Argentina,Litoral,CdU,2023-11-05,Partly Cloudy 25/12 6%,Landsat-8
-Argentina,Litoral,CdU,2023-11-06,Sunny 28/18 7%,Sentinel-2A
-Argentina,Litoral,CdU,2023-11-09,Showers 24/15 61%,Sentinel-2A
-Argentina,Litoral,CdU,2023-11-10,Rain / Thunder 21/16 66%,Landsat-8
-Argentina,Litoral,CdU,2023-11-11,Scattered T-Storms 26/17 60%,Sentinel-2B
-Argentina,Pampa,Oliveros,2023-10-25,90.63 %nubes,Sentinel-2B
-Argentina,Pampa,Oliveros,2023-10-28,0.00 %nubes,Sentinel-2B
-Argentina,Pampa,Oliveros,2023-10-30,100.00 %nubes,Sentinel-2A
-Argentina,Pampa,Oliveros,2023-10-30,100.00 %nubes,Sentinel-2A
-Argentina,Pampa,Oliveros,2023-11-02,99.33 %nubes,Sentinel-2A
-Argentina,Pampa,Oliveros,2023-11-04,Sunny 24/11 7%,Sentinel-2B
-Argentina,Pampa,Oliveros,2023-11-05,Partly Cloudy 25/13 5%,Landsat-8
-Argentina,Pampa,Oliveros,2023-11-06,Sunny 28/18 7%,Sentinel-2A
-Argentina,Pampa,Oliveros,2023-11-07,PM T-Storms 31/16 41%,Sentinel-2B
-Argentina,Pampa,Oliveros,2023-11-09,PM Showers 24/16 45%,Sentinel-2A
-Argentina,Pampa,Oliveros,2023-11-11,AM Showers 25/16 40%,Sentinel-2B
-Argentina,Pampa,Oliveros,2023-11-12,Partly Cloudy 25/14 22%,Sentinel-2A
+Argentina,Litoral,CdU,2024-02-02,0.00 %nubes,Sentinel-2B
+Argentina,Litoral,CdU,2024-02-07,26.39 %nubes,Sentinel-2A
+Argentina,Litoral,CdU,2024-02-09,PM T-Storms 35/24 51%,Landsat-8
+Argentina,Litoral,CdU,2024-02-09,PM T-Storms 35/24 51%,Sentinel-2B
+Argentina,Litoral,CdU,2024-02-12,T-Storms 30/20 87%,Sentinel-2B
+Argentina,Litoral,CdU,2024-02-14,Showers 29/21 43%,Sentinel-2A
+Argentina,Litoral,CdU,2024-02-14,Showers 29/21 43%,Landsat-8
+Argentina,Litoral,CdU,2024-02-17,T-Storms 29/20 60%,Sentinel-2A
+Argentina,Pampa,Oliveros,2024-01-31,13.49 %nubes,Sentinel-2A
+Argentina,Pampa,Oliveros,2024-02-02,0.00 %nubes,Sentinel-2B
+Argentina,Pampa,Oliveros,2024-02-05,0.00 %nubes,Sentinel-2B
+Argentina,Pampa,Oliveros,2024-02-07,84.43 %nubes,Sentinel-2A
+Argentina,Pampa,Oliveros,2024-02-09,T-Storms 31/22 86%,Landsat-8
+Argentina,Pampa,Oliveros,2024-02-09,T-Storms 31/22 86%,Sentinel-2B
+Argentina,Pampa,Oliveros,2024-02-10,AM T-Storms 30/22 53%,Sentinel-2A
+Argentina,Pampa,Oliveros,2024-02-12,T-Storms 27/19 96%,Sentinel-2B
+Argentina,Pampa,Oliveros,2024-02-14,AM Showers 28/20 31%,Sentinel-2A
+Argentina,Pampa,Oliveros,2024-02-15,T-Storms 30/21 67%,Sentinel-2B
+Argentina,Pampa,Oliveros,2024-02-17,Scattered T-Storms 28/20 56%,Sentinel-2A

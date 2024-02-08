@@ -1,17 +1,46 @@
 Pais,Region,Localidad,Fecha,Potrero,Lat,Lon
 Argentina,Litoral,CdU,2023-02-28,Ovinos 1,-32.489457,-58.349024
 Argentina,Litoral,CdU,2023-05-09,Avena F2,-32.507614,-58.368801
-Argentina,Litoral,CdU,2023-05-23,Pot 17 F2,-32.513812,-58.376781
+Argentina,Litoral,CdU,2023-05-23,Pot 17,-32.513812,-58.376781
 Argentina,Litoral,CdU,2023-05-29,Pot 24,-32.518256,-58.375262
-Argentina,Litoral,CdU,2023-06-21,Pot 20 F2,-32.511793,-58.375847
-Argentina,Litoral,CdU,2023-07-04,Ovinos Rg TR,-32.487426,-58.346832
-Argentina,Litoral,CdU,2023-07-11,Pot 23O F2,-32.519246,-58.380686
+Argentina,Litoral,CdU,2023-06-21,Pot 20,-32.511793,-58.375847
+Argentina,Litoral,CdU,2023-07-04,Ovinos 3,-32.487426,-58.346832
+Argentina,Litoral,CdU,2023-07-11,Pot 23O,-32.519246,-58.380686
 Argentina,Litoral,CdU,2023-10-03,Ovinos 1,-32.489393,-58.348994
 Argentina,Litoral,CdU,2023-10-03,Ovinos 2,-32.487929,-58.348976
 Argentina,Litoral,CdU,2023-10-03,Ovinos 3,-32.487537,-58.346945
 Argentina,Litoral,CdU,2023-10-09,Caretas 44,-32.503134,-58.352945
 Argentina,Litoral,CdU,2023-10-09,Caretas 71,-32.506922,-58.352505
-Argentina,Pampa,Oliveros,,,,
-Argentina,Pampa,Oliveros,2023-10-18,Lote 2 sin pastoreo,-32.562768,-60.856943
-Argentina,Pampa,Oliveros,2023-10-20,Aldo Nicola,-32.318357,-61.032650
-Argentina,Pampa,Oliveros,2023-10-20,Aldo acelga,-32.299718,-61.067727
+Argentina,Litoral,CdU,2023-11-07,Pot 17,-32.513816,-58.376575
+Argentina,Litoral,CdU,2023-11-07,VIP 76S,-32.518523,-58.371705
+Argentina,Litoral,CdU,2023-11-07,VIP 75,-32.510975,-58.367052
+Argentina,Litoral,CdU,2023-11-09,Pot 4 al 11,-32.516880,-58.382016
+Argentina,Litoral,CdU,2023-11-09,VIP 76 Camino,-32.514219,-58.371420
+Argentina,Litoral,CdU,2023-11-23,DP 46,-32.524147,-58.371578
+Argentina,Litoral,CdU,2023-11-23,DP 80,-32.522901,-58.369842
+Argentina,Litoral,CdU,2023-11-27,Ovinos 1,-32.489440,-58.348981
+Argentina,Litoral,CdU,2023-11-27,Ovinos 2,-32.487958,-58.348994
+Argentina,Litoral,CdU,2023-11-27,Ovinos 3,-32.487473,-58.346996
+Argentina,Litoral,CdU,2024-01-30,Ovinos 3,-32.487567,-58.346898
+Argentina,Litoral,CdU,2024-01-30,Ovinos 2,-32.488082,-58.349103
+Argentina,Litoral,CdU,2024-01-30,Ovinos 1,-32.489460,-58.348921
+Argentina,Litoral,CdU,2024-01-31,VIP 76S,-32.518425,-58.371683
+Argentina,Litoral,CdU,2024-01-31,VIP 76 Camino,-32.514282,-58.371367
+Argentina,Litoral,CdU,2024-02-06,VIP 75,-32.510885,-58.367148
+Argentina,Litoral,CdU,2024-02-07,Caretas 64,-32.501625,-58.355602
+Argentina,Litoral,CdU,2024-02-07,Caretas 39 Sur,-32.508903,-58.368250
+Argentina,Pampa,Oliveros,2023-02-28,Guille Brown _1,,
+Argentina,Pampa,Oliveros,2023-02-28,Guille Brown _1B,-33.088026,-61.608619
+Argentina,Pampa,Oliveros,2023-02-28,Guille Brown _2,,
+Argentina,Pampa,Oliveros,2023-02-28,Guille Brown _5,,
+Argentina,Pampa,Oliveros,2023-02-28,Guille Brown _6,,
+Argentina,Pampa,Oliveros,2023-02-28,Guille Brown _8,,
+Argentina,Pampa,Oliveros,2023-10-02,Guille Brown _6,,
+Argentina,Pampa,Oliveros,2023-10-02,Guille Brown_1B,-33.088026,-61.608619
+Argentina,Pampa,Oliveros,2023-10-18,EEA Oliveros_Lote 2 sin pastoreo,-32.562768,-60.856943
+Argentina,Pampa,Oliveros,2023-10-20,Aldo Nicola_Aldo Nicola,-32.318357,-61.032650
+Argentina,Pampa,Oliveros,2023-10-20,Aldo Nicola_Aldo acelga,-32.299718,-61.067727
+Argentina,Pampa,Oliveros,2023-11-06,Guille Brown_Lote 1B,-33.088026,-61.608619
+Argentina,Pampa,Oliveros,2023-12-21,Guille Brown _Lote 4,,
+Argentina,Pampa,Oliveros,2024-01-05,Guille Brown _Lote 1B,-33.088026,-61.608619
+Argentina,Pampa,Oliveros,2024-02-01,Guille Brown _8,-33.080567,-61.616786
