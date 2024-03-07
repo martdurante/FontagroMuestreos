@@ -1,0 +1,96 @@
+---
+title: "Sitios Fontagro"
+authors: "MD"
+output: 
+  flexdashboard::flex_dashboard:
+    # orientation: columns
+    # vertical_layout: fill
+    theme: cosmo
+    #logo: INIA_URUGUAY_blanco.svg
+    # favicon: INIA_URUGUAY_azul.png
+    # storyboard: true
+# runtime: shiny
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(DT)
+library(flexdashboard)
+library(DT)
+library(tidyverse)
+library(crosstalk)
+library(plotly)
+#library(leaflet)
+#suppressMessages(library(tidyverse))
+#theme_set(theme_bw())
+#setwd('/home/durante/OneDrive/ResultFontagro/dashboardFONTAGRO/')
+pronostico = read.csv('/home/durante/OneDrive/ResultFontagro/GIT/FontagroMuestreos/tablas/OUTpronostico.csv')
+for (i in 1:nrow(pronostico)){
+  pasado <- grepl("%nubes", pronostico$EstadoTiempo[i], fixed=TRUE)
+  separado <- unlist(strsplit(pronostico$EstadoTiempo[i],' '))
+  valor <- ifelse(pasado==TRUE, separado[1], substring(separado[length(separado)],1,nchar(separado[length(separado)])-1))
+  #pronostico$valor[i] <- as.integer(valor)
+  pronostico$nubes[i] <- ifelse(pasado==TRUE,as.integer(valor),NA)
+  pronostico$probLluvia[i] <- ifelse(pasado==TRUE,NA,as.integer(valor))
+}
+pronostico$Localidad <- as.factor(pronostico$Localidad)
+
+#new dt for crosstalk
+shared_data <- SharedData$new(pronostico)
+
+mediciones = read.csv('tablas/OUTpuntos.csv')
+```
+
+# General
+
+## Column {data-width = 350} {.tabset}
+[FONTAGRO Monitreo Satelital](https://www.fontagro.org/new/proyectos/monitoreosatelital)
+
+### Herramientas Digitales
+[APP para clasificar ambientes](https://ee-fontagrobiomasa.projects.earthengine.app/view/clasificacion)  
+[Calculadora de Nº de muestras](https://fontagrobiomasa.shinyapps.io/calculadoraNmuestras/)
+
+# Pronóstico
+Inputs {.sidebar data-width=250}
+-----------------------------------------------
+
+```{r}
+filter_select("Localidad", "Select Localidad", shared_data, ~Localidad, multiple = FALSE)
+#filter_slider("Fecha", "Select Fecha", shared_data, ~Fecha, round = TRUE, ticks = FALSE)
+```
+Column {data-width=700}
+---------------------------------------------
+
+### Grafico del tiempo para las próximas visitas de satélite
+```{r}
+#plot_ly(shared_data, y = ~nubes, x = ~fecha, type = 'scatter', mode='lines+markers', line = list(width = 1), color = I(~Localidad), orientation = 'h') %>%
+# add_trace(y = ~probLluvia, mode = 'lines+markers', line = list(width = 1, dash = 'dot')) %>%
+#  layout(title = "Nubes y Probabilidad de lluvia",
+#         xaxis = list(title = "Fecha"),
+#         yaxis = list (title = "%")) %>% layout(autosize = F, height = 300)
+
+plot_ly(shared_data, y = ~nubes, x = ~fecha, type = 'scatter', mode='lines+markers', line = list(width = 1), color = I(~Localidad), orientation = 'h') %>%
+  add_text(text = ~satellite, hoverinfo = "text", showlegend = FALSE) %>% 
+  add_trace(y = ~probLluvia, mode = 'lines+markers', line = list(width = 1, dash = 'dot'), showlegend = FALSE) %>%
+  add_text(y = ~probLluvia, text = ~satellite, hoverinfo = "text", showlegend = FALSE) %>% 
+  layout(title = "Nubes y Probabilidad de lluvia",
+         xaxis = list(title = "Fecha"),
+         yaxis = list (title = "%"))
+
+
+```
+
+### Tabla del tiempo para las próximas visitas de satélite
+```{r}
+shared_data %>%
+  datatable(filter='top')
+```
+#  Ultimas Mediciones
+```{r}
+mediciones %>%
+  na.omit()  %>%
+  arrange(Pais,Region,Localidad,desc(Fecha)) %>% 
+  datatable(filter='top')
+```

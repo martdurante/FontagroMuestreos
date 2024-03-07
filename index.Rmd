@@ -36,6 +36,7 @@ for (i in 1:nrow(pronostico)){
   pronostico$probLluvia[i] <- ifelse(pasado==TRUE,NA,as.integer(valor))
 }
 pronostico$Localidad <- as.factor(pronostico$Localidad)
+
 #new dt for crosstalk
 shared_data <- SharedData$new(pronostico)
 
@@ -49,7 +50,7 @@ mediciones = read.csv('tablas/OUTpuntos.csv')
 
 ### Herramientas Digitales
 [APP para clasificar ambientes](https://ee-fontagrobiomasa.projects.earthengine.app/view/clasificacion)  
-[Calcularora de Nº de muestras](https://fontagrobiomasa.shinyapps.io/calculadoraNmuestras/)
+[Calculadora de Nº de muestras](https://fontagrobiomasa.shinyapps.io/calculadoraNmuestras/)
 
 # Pronóstico
 Inputs {.sidebar data-width=250}
@@ -64,12 +65,23 @@ Column {data-width=700}
 
 ### Grafico del tiempo para las próximas visitas de satélite
 ```{r}
+#plot_ly(shared_data, y = ~nubes, x = ~fecha, type = 'scatter', mode='lines+markers', line = list(width = 1), color = I(~Localidad), orientation = 'h') %>%
+# add_trace(y = ~probLluvia, mode = 'lines+markers', line = list(width = 1, dash = 'dot')) %>%
+#  layout(title = "Nubes y Probabilidad de lluvia",
+#         xaxis = list(title = "Fecha"),
+#         yaxis = list (title = "%")) %>% layout(autosize = F, height = 300)
+
 plot_ly(shared_data, y = ~nubes, x = ~fecha, type = 'scatter', mode='lines+markers', line = list(width = 1), color = I(~Localidad), orientation = 'h') %>%
- add_trace(y = ~probLluvia, mode = 'lines+markers', line = list(width = 1, dash = 'dot')) %>%
+  add_text(text = ~satellite, hoverinfo = "text", showlegend = FALSE) %>% 
+  add_trace(y = ~probLluvia, mode = 'lines+markers', line = list(width = 1, dash = 'dot'), showlegend = FALSE) %>%
+  add_text(y = ~probLluvia, text = ~satellite, hoverinfo = "text", showlegend = FALSE) %>% 
   layout(title = "Nubes y Probabilidad de lluvia",
          xaxis = list(title = "Fecha"),
-         yaxis = list (title = "%")) %>% layout(autosize = F, height = 300)
+         yaxis = list (title = "%"))
+
+
 ```
+
 ### Tabla del tiempo para las próximas visitas de satélite
 ```{r}
 shared_data %>%
@@ -79,5 +91,6 @@ shared_data %>%
 ```{r}
 mediciones %>%
   na.omit()  %>%
+  arrange(Pais,Region,Localidad,desc(Fecha)) %>% 
   datatable(filter='top')
 ```

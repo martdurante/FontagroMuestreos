@@ -1,3 +1,4 @@
 Pais,Region,Localidad,Lat,Lon,Pronostico,appName,phenoPhoto
 Argentina,Litoral,CdU,-32.4911,-58.3495,https://weather.com/en-IN/weather/tenday/l/9049e86839de7e1207c67551fbb5af20095726f8f1386a8e233f237db897e297,PhPh_CdU-932674123,si
 Argentina,Pampa,Oliveros,-30.3852,-58.7689,https://weather.com/en-IN/weather/tenday/l/1c5d0a279c0ba2ea4caad2ea4e5bfbb1e23b7251b7254720d04effc0a4f0488d,PhPh_CdU-932674123-23-10-09,si
+Argentina,Chaco,Quimili,-26.710475,-63.254283,https://weather.com/en-IN/weather/tenday/l/b59cde824c0fcd1b749e1ec2e447928e12d24e845713ee06eadb006852f5a3e0,PhPh_Quimili-932674123,no
